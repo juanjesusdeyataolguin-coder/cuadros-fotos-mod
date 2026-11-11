@@ -1,0 +1,5 @@
+{ "variants": {
+  "facing=north": { "model": "fotos:block/photo_frame" },
+  "facing=east":  { "model": "fotos:block/photo_frame", "y": 90 },
+  "facing=south": { "model": "fotos:block/photo_frame", "y": 180 },
+  "facing=west":  { "model": "fotos:block/photo_frame", "y": 270 } } }

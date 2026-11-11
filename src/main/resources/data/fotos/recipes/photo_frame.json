@@ -1,0 +1,4 @@
+{ "type": "minecraft:crafting_shaped",
+  "pattern": ["SSS", "SPS", "SSS"],
+  "key": { "S": { "item": "minecraft:stick" }, "P": { "item": "minecraft:paper" } },
+  "result": { "item": "fotos:photo_frame", "count": 1 } }

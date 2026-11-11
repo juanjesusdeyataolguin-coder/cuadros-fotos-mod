@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "fotos",
+  "version": "${version}",
+  "name": "Cuadros de fotos",
+  "description": "Cuadro personalizado y cámara. Mod by FRAXXZ.",
+  "authors": ["FRAXXZ"],
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.fraxxz.fotos.FotosMod"],
+    "client": ["com.fraxxz.fotos.FotosClient"]
+  },
+  "depends": { "fabricloader": ">=0.15.0", "minecraft": "1.20.1", "java": ">=17", "fabric-api": "*" }
+}
