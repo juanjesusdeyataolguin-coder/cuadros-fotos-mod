@@ -2,11 +2,15 @@ package com.fraxxz.fotos;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import javax.imageio.ImageIO;
 import net.minecraft.client.texture.NativeImage;
 
 public final class ImageUtil {
     public static final int MAX_SIDE = 512;
+    public static byte[] toBytes(NativeImage img) throws IOException { File tmp = File.createTempFile("fotos", ".png"); try { img.writeTo(tmp); return Files.readAllBytes(tmp.toPath()); } finally { tmp.delete(); } }
 
     /** Lee cualquier imagen (png/jpg/gif/bmp), la reduce a 512 px máx. y la devuelve como PNG. null si falla. */
     public static byte[] normalize(byte[] raw) {
@@ -67,7 +71,7 @@ public final class ImageUtil {
                     out.setColor(xx, yy, (a << 24) | (b << 16) | (g << 8) | r);
                 }
             }
-            return out.asByteArray();
+            return toBytes(out);
         } catch (Throwable t) {
             return null;
         }

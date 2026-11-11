@@ -34,7 +34,7 @@ public final class CameraClient {
         c.gameRenderer.setRenderHand(true);
         byte[] raw = null;
         try {
-            raw = shot.asByteArray();
+            raw = ImageUtil.toBytes(shot);
         } catch (IOException ignored) {
         } finally {
             shot.close();
